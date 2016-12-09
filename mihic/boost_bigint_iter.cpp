@@ -10,17 +10,25 @@ int main(int argc, char* argv[])
       number<gmp_int> a=1;
       number<gmp_int> b=1;
       number<gmp_int> c=1;
+      number<gmp_int> d=1;
+
       //scanf("%d",&num_iters);
-      printf("Doing %d iterations\n",num_iters);
+      printf("Calculating %dth fibbonaci number\n",num_iters);
+      num_iters = num_iters +1;
       for (int i = 0; i<num_iters;i++){
          c=a+b;
-         a=b;
-         b=c;
+         //a=b;
+         //b=c;
+         swap(b,d);
+         swap(d,a);
+         swap(d,d);
+         swap(c,b);
+
       }
 
-      c=c%1000;
+      d=d%10000;
       printf("Done\n");
-      std::cout << c << '\n';
+      std::cout << d << '\n';
       
    return 0;
 }
