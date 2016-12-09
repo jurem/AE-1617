@@ -1,0 +1,6 @@
+Poraba pomnilnika pri racunanju z memoizacijo (hranjenje vseh prejsnih rezultatov)
+
+v1: racunamo fibonaccija doker ne zmanjka pomnilnika
+v2: merimo kako veliko pomnilnika porabimo za n-tega fibonaccija
+
+Skripti sami izvedeta meritve in shranita izpis v tekstovno datoteko, dva primera izpisa sta vkljucena. Parametre za meritve se nastavi v skriptah.
