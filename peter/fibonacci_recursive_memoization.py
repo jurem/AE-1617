@@ -13,7 +13,7 @@ def fib(n):
         return f
 
 
-for i in range(1, 5000, 20):
+for i in range(1, 7000, 20):
     repetitions = 100
 
     t = time()
@@ -24,4 +24,4 @@ for i in range(1, 5000, 20):
         foo = fib(i)
     avg_time = (time() - t) / repetitions
 
-    print(i, avg_time * 1000, getsizeof(memo))  # ms
+    print avg_time * 1000  # ms

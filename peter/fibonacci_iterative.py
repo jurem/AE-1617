@@ -2,13 +2,16 @@ from time import time
 
 
 def fib(n):
-    a, b = 0, 1
+    a = 0
+    b = 0
     for _ in range(n):
-        a, b = b, a + b
+        c = a + b
+        a = b
+        b = c
     return a
 
 
-for i in range(1, 5000, 20):
+for i in range(1, 7000, 20):
     repetitions = 100
 
     t = time()

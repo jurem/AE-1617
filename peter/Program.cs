@@ -8,14 +8,14 @@ namespace ConsoleApplication1 {
             long frequency = Stopwatch.Frequency; // processor frequency
 
             int step = 20;
-            for (int i = 1; i < 7000; i += step) {                int repetitions = 100; // calculate every Fibonacci number many times (to calculate time more correct)
+            for (int i = 500; i < 2000; i += step) {                int repetitions = 100; // calculate every Fibonacci number many times (to calculate time more correct)
                 sw.Restart(); // start measuring time                for (int j = 0; j < repetitions; j++) {
                     // Iterative
-                    BigInteger foo = fibIter(i); // calculate n-th Fibonacci number
+                    //BigInteger foo = fibIter(i); // calculate n-th Fibonacci number
 
                     // Recursive
-                    //initializeArray(i); // initialize/clear memo
-                    //BigInteger foo = fibRek(i); // calculate n-th Fibonacci number
+                    initializeArray(i); // initialize/clear memo
+                    BigInteger foo = fibRek(i); // calculate n-th Fibonacci number
                 }                sw.Stop();                ticks = sw.ElapsedTicks;                double averageTime = 1000 * ticks / (Stopwatch.Frequency); // ms                Console.WriteLine(averageTime / repetitions);            }
             Console.WriteLine("Done.");
             Console.ReadLine();        }
